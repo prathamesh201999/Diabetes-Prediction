@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+<head>
+        <meta charset="utf-8">
+        <title>Diabetes Predictor</title>
+        <link rel="short icon" href="static/diabetes1-favicon.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+        body{
+                    font-family: Arial, Helvetica,sans-serif;
+                    color: DimGrey;
+                    text-align: center;
+                    margin: 0;
+                    padding: 0;
+                    width: 100%;
+                	height: 100%;
+                	display: flex;
+                	flex-direction: column;
+                	background: LightCyan;
+                	font: italic bold 20px/1 "Calibri", sans-serif;        
+}
+
+        h1{
+                    color: DimGrey;
+                    font-size: 42px;
+}
+
+        h2{
+                    color: red;
+                    font-size: 42px;        
+}
+
+        img{
+                    width: 20%;
+                    margin-left: auto;
+                    margin-right: auto;        
+}
+
+        footer{
+                    margin-top: 10px;
+                    font: italic 20px/1 "Calibri", sans-serif;
+                    color: DimGrey;                    
+}
+
+        a{
+                    font-size:40px;
+                    margin-right: 25px;
+                    margin-left: 25px;
+}
+
+        p1{
+                    font: italic bold 20px/1 "Calibri", sans-serif;
+}
+        </style>
+       
+</head>
+        <body>
+<!-- Website Title -->
+            
+            <div class="container">
+            <h1>Diabetes Predictor</h1>
+    		<p>A Machine Learning Web App, Built with Flask, Deployed using Heroku.</p>
+        	</div>
+
+		<!-- Result -->
+		
+			{% if prediction==1 %}
+				<h2>Prediction:<br> Oops! You have DIABETES.</h2>
+				<img class="gif" src="static/sad.webp">
+				
+			{% elif prediction==0 %}
+				<h1>Prediction:<br> Great! You DON'T have diabetes.</h1>
+				<img class="gif" src="static/happyy.webp">
+				
+			{% endif %}
+			
+			
+			<!-- Footer-->
+			 <footer>
+             <p1>Contact Me Via</p1><br><br>
+             <a target="_blank" href="https://github.com/Naveen20-pixel/Deployment-Diabetes-Prediction-Model"><i class="fa fa-github"></i></a>
+             <a target="_blank" href="https://www.linkedin.com/in/naveen-nattuva-9472891a1/"><i class="fa fa-linkedin"></i></a><br><br>
+             <p1>Made with &#128151 by Naveen Nattuva</p1>
+             </footer>
+		
+        </body>
+        
+</html>
